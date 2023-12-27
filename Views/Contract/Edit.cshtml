@@ -1,0 +1,67 @@
+@model rent_a_car_mvc.Models.Contract
+@{
+}
+
+<h2>Edit Contract</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="CarId">Select Car:</label>
+        <select asp-for="CarId" class="form-control" asp-items="ViewBag.CarDropdown"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RenterId">Select Renter:</label>
+        <select asp-for="RenterId" class="form-control" asp-items="ViewBag.CustomerDropdown"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DriverId">Select Driver:</label>
+        <select asp-for="DriverId" class="form-control" asp-items="ViewBag.CustomerDropdown"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="StartLocation"></label>
+        <select asp-for="StartLocation" class="form-control">
+            <option value="Airport Ankara">Airport Ankara</option>
+            <option value="Office">Office</option>
+        </select>
+        <span asp-validation-for="StartLocation" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="StartDateTime"></label>
+        <input asp-for="StartDateTime" class="form-control" />
+        <span asp-validation-for="StartDateTime" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EndLocation"></label>
+        <select asp-for="EndLocation" class="form-control">
+            <option value="Airport Ankara">Airport Ankara</option>
+            <option value="Office">Office</option>
+        </select>
+        <span asp-validation-for="EndLocation" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EndDateTime"></label>
+        <input asp-for="EndDateTime" class="form-control" />
+        <span asp-validation-for="EndDateTime" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Deposit"></label>
+        <input asp-for="Deposit" class="form-control" />
+        <span asp-validation-for="Deposit" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TotalAmount"></label>
+        <input asp-for="TotalAmount" class="form-control" />
+        <span asp-validation-for="TotalAmount" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Edit</button>
+</form>

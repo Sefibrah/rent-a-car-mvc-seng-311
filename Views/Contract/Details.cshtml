@@ -1,0 +1,38 @@
+@model rent_a_car_mvc.Dtos.ContractDto
+@{
+}
+
+<div class="container">
+    <h1>Details</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Contract</h5>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <dl class="row">
+                        <dt class="col-sm-4">Car:</dt>
+                        <dd class="col-sm-8">@Model.Car</dd>
+                        <dt class="col-sm-4">Renter:</dt>
+                        <dd class="col-sm-8">@Model.Renter</dd>
+                        <dt class="col-sm-4">Driver:</dt>
+                        <dd class="col-sm-8">@Model.Driver</dd>
+                        <dt class="col-sm-4">Contact:</dt>
+                        <dd class="col-sm-8">@Model.Contact</dd>
+                        <dt class="col-sm-4">Start:</dt>
+                        <dd class="col-sm-8">@Model.Start</dd>
+                        <dt class="col-sm-4">End:</dt>
+                        <dd class="col-sm-8">@Model.End</dd>
+                        <dt class="col-sm-4">Deposit:</dt>
+                        <dd class="col-sm-8">@Model.Deposit</dd>
+                        <dt class="col-sm-4">Total Amount:</dt>
+                        <dd class="col-sm-8">@Model.TotalAmount</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary mt-3">Back to Contract List</a>
+</div>

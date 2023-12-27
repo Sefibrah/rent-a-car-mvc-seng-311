@@ -1,0 +1,30 @@
+@model rent_a_car_mvc.Models.Car
+@{
+}
+
+<div class="container">
+    <h1>Details</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Car</h5>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <dl class="row">
+                        <dt class="col-sm-4">Make:</dt>
+                        <dd class="col-sm-8">@Model.Make</dd>
+
+                        <dt class="col-sm-4">Model:</dt>
+                        <dd class="col-sm-8">@Model.Model</dd>
+
+                        <dt class="col-sm-4">Registation Plate:</dt>
+                        <dd class="col-sm-8">@Model.RegistrationPlate</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary mt-3">Back to Car List</a>
+</div>
